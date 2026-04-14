@@ -1,6 +1,3 @@
-# ─────────────────────────────────────────────
-# S3 BUCKET  –  stores all static website files
-# ─────────────────────────────────────────────
 
 resource "aws_s3_bucket" "website" {
   bucket        = "${var.project_name}-static-website-${random_id.suffix.hex}"
