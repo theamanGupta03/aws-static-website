@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About – My AWS Demo Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">⬡ MyWebsite</span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1>About <span class="accent">This Project</span></h1>
+    <p>A hands-on cloud practice project — from zero to deployed.</p>
+  </section>
+
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Why I built this</h2>
+        <p>This project is a practice demo to learn how to host static websites on AWS using industry-standard tools. Instead of just reading about cloud infrastructure, I built it myself — deploying real AWS services with Terraform.</p>
+        <h2>What I learned</h2>
+        <ul class="learn-list">
+          <li>✅ How S3 stores static files privately</li>
+          <li>✅ How CloudFront distributes content globally</li>
+          <li>✅ How API Gateway handles dynamic requests</li>
+          <li>✅ How Terraform creates infrastructure as code</li>
+          <li>✅ How IAM policies secure access between services</li>
+        </ul>
+      </div>
+      <div class="about-aside">
+        <div class="info-card">
+          <h3>Tech Stack</h3>
+          <ul class="stack-list">
+            <li><span class="tag tag-html">HTML</span> Structure</li>
+            <li><span class="tag tag-css">CSS</span> Styling</li>
+            <li><span class="tag tag-js">JS</span> Interactivity</li>
+            <li><span class="tag tag-aws">S3</span> File storage</li>
+            <li><span class="tag tag-aws">CloudFront</span> CDN</li>
+            <li><span class="tag tag-aws">API Gateway</span> API routing</li>
+            <li><span class="tag tag-tf">Terraform</span> Infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with ❤️ · Hosted on AWS · Infrastructure by Terraform</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

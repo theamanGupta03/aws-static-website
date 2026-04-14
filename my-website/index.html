@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My AWS Demo Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="logo">⬡ MyWebsite</span>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">🚀 Hosted on AWS S3 + CloudFront</div>
+    <h1>Hello,<br><span class="accent">World.</span></h1>
+    <p class="hero-sub">This is my demo static website — built with plain HTML &amp; CSS and deployed to the cloud using Amazon S3, CloudFront, and API Gateway — all provisioned by Terraform.</p>
+    <div class="hero-actions">
+      <a href="about.html" class="btn-primary">Learn More</a>
+      <a href="contact.html" class="btn-outline">Contact</a>
+    </div>
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- TECH STACK CARDS -->
+  <section class="cards-section">
+    <h2 class="section-title">What powers this site</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" style="background:#e8f4fd">☁️</div>
+        <h3>Amazon S3</h3>
+        <p>All HTML, CSS, and image files are stored in a private S3 bucket. No public access — only CloudFront can read them.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#edf7f0">⚡</div>
+        <h3>CloudFront CDN</h3>
+        <p>Files are cached at 400+ global edge locations. Visitors get fast load times no matter where they are in the world.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#fdf3e8">🔌</div>
+        <h3>API Gateway</h3>
+        <p>Dynamic API calls are routed through CloudFront to API Gateway, keeping the frontend and backend under one domain.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:#f3eefb">🏗️</div>
+        <h3>Terraform IaC</h3>
+        <p>Every AWS resource above is defined as code in <code>.tf</code> files. One command deploys the entire infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="flow-section">
+    <h2 class="section-title">How a request travels</h2>
+    <div class="flow">
+      <div class="flow-step"><span class="step-num">1</span><strong>You</strong><br>open the URL</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><span class="step-num">2</span><strong>CloudFront</strong><br>edge server</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><span class="step-num">3</span><strong>S3 Bucket</strong><br>static files</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><span class="step-num">4</span><strong>Browser</strong><br>renders page</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with ❤️ · Hosted on AWS · Infrastructure by Terraform</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

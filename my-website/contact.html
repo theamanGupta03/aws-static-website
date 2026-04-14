@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – My AWS Demo Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">⬡ MyWebsite</span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1>Say <span class="accent">Hello</span></h1>
+    <p>This form is a demo — wire it to API Gateway + Lambda to make it live!</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-form-wrap">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="e.g. Rahul Sharma" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="e.g. rahul@example.com" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write something..."></textarea>
+      </div>
+      <button class="btn-primary" onclick="handleSubmit()">Send Message</button>
+      <div id="form-result" class="form-result"></div>
+    </div>
+
+    <div class="contact-info">
+      <h3>How this form works</h3>
+      <p>In a real setup, clicking "Send Message" makes an API call to:</p>
+      <code>POST https://your-domain.com/api/contact</code>
+      <p style="margin-top:1rem">That request goes:</p>
+      <div class="mini-flow">
+        <span>Browser</span>
+        <span>→</span>
+        <span>CloudFront</span>
+        <span>→</span>
+        <span>API Gateway</span>
+        <span>→</span>
+        <span>Lambda</span>
+        <span>→</span>
+        <span>Email / DB</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with ❤️ · Hosted on AWS · Infrastructure by Terraform</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
